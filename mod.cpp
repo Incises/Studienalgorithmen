@@ -8,7 +8,7 @@ LL gcd(LL a, LL b){
 }
 LL gcdEx(LL a, LL b)
     {
-    //B¨¦zout's identity
+    //Bezout's identity
     //ax+by=1
     LL x, y;
     if (b == 0){
