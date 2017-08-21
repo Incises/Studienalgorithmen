@@ -6,9 +6,9 @@ LL gcd(LL a, LL b){
         return a;
     return gcd(b, a%b);
 }
-LL gcdEx(LL a,LL b)
+LL gcdEx(LL a, LL b)
     {
-    //Bezout
+    //B¨¦zout's identity
     //ax+by=1
     LL x, y;
     if (b == 0){
@@ -27,7 +27,7 @@ LL fastModExp(LL base, LL power, LL mod)
 {
     LL tmp = 1;
     LL result = 0;
-    while(power)
+    while(power!=1)
     {
         if((power&1) == 0)
         {
@@ -40,7 +40,7 @@ LL fastModExp(LL base, LL power, LL mod)
             tmp = (tmp * base) % mod;
         }
     }
-    result = tmp * base % mod;
+    result = (tmp * base) % mod;
     if (result < 1)
         result += mod;
     return (LL)result;
@@ -82,6 +82,7 @@ LL fastModExp(LL base, LL power, LL mod)
 */
 int main()
 {
-    cout<<fastModExp(2,10,5)<<endl;
+    //cout<<fastModExp(2,1,5)<<endl;
+    //cout<<fastModExp(2,10,5)<<endl;
     return 0;
 }
